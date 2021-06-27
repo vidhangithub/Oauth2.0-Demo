@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="vid-employee" />
+        <module name="okta-token-service" />
+        <module name="vidhan-own-auth-server" />
+        <module name="vidhan-ui" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="okta-token-service" target="11" />
+      <module name="vid-employee" target="11" />
+      <module name="vidhan-own-auth-server" target="11" />
+      <module name="vidhan-ui" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="okta-token-service" options="-parameters" />
+      <module name="vid-employee" options="-parameters" />
+      <module name="vidhan-own-auth-server" options="-parameters" />
+      <module name="vidhan-ui" options="-parameters" />
+    </option>
+  </component>
+</project>

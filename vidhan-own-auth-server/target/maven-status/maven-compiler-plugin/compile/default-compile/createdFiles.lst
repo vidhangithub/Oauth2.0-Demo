@@ -1,0 +1,11 @@
+com\vidhan\ownauthserver\config\AuthServerJDBCConfiguration.class
+com\vidhan\ownauthserver\model\AuthServerUserDetails.class
+com\vidhan\ownauthserver\VidhanOwnAuthServerApplication.class
+com\vidhan\ownauthserver\model\User.class
+com\vidhan\ownauthserver\config\WebSecurityJDBCConfiguration.class
+com\vidhan\ownauthserver\config\AuthServerConfiguration.class
+com\vidhan\ownauthserver\model\Permission.class
+com\vidhan\ownauthserver\service\UserDetailsServiceImpl.class
+com\vidhan\ownauthserver\config\UserConfiguration.class
+com\vidhan\ownauthserver\repository\UserDetailsRepository.class
+com\vidhan\ownauthserver\model\Role.class

@@ -1,0 +1,5 @@
+com\vidhan\empui\controller\VidhanUIController.class
+com\vidhan\empui\model\UIEmployee.class
+com\vidhan\empui\VidhanUiApplication.class
+com\vidhan\empui\config\RestTemplateConfiguration.class
+com\vidhan\empui\config\AccessToken.class

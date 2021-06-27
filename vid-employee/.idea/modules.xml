@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../okta-token-service/okta-token-service.iml" filepath="$PROJECT_DIR$/../okta-token-service/okta-token-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vid-employee.iml" filepath="$PROJECT_DIR$/vid-employee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../vidhan-own-auth-server/vidhan-own-auth-server.iml" filepath="$PROJECT_DIR$/../vidhan-own-auth-server/vidhan-own-auth-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../vidhan-ui/vidhan-ui.iml" filepath="$PROJECT_DIR$/../vidhan-ui/vidhan-ui.iml" />
+    </modules>
+  </component>
+</project>

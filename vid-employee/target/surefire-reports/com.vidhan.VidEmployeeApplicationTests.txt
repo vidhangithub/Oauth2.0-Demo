@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.vidhan.VidEmployeeApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.878 s <<< FAILURE! - in com.vidhan.VidEmployeeApplicationTests
+contextLoads  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeController' defined in file [C:\Codebases\OAuth2.0Demo\vid-employee\target\classes\com\vidhan\controllers\EmployeeController.class]: Initialization of bean failed; nested exception is org.springframework.aop.framework.AopConfigException: Unexpected AOP exception; nested exception is java.lang.IllegalStateException: No node
+Caused by: org.springframework.aop.framework.AopConfigException: Unexpected AOP exception; nested exception is java.lang.IllegalStateException: No node
+Caused by: java.lang.IllegalStateException: No node
+
