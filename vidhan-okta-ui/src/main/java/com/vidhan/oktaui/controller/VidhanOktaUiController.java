@@ -8,7 +8,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientService;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
@@ -52,14 +54,9 @@ public class VidhanOktaUiController extends WebSecurityConfigurerAdapter {
     }
 
     @RequestMapping(value = "/employees")
-    public String loadCustomers(Model model , @AuthenticationPrincipal OAuth2AuthenticationToken authentication ) {
-        OAuth2AuthorizedClient authorizedClient =
-                this.authorizedClientService.loadAuthorizedClient(
-                        authentication.getAuthorizedClientRegistrationId(),
-                        authentication.getName());
-        OAuth2AccessToken accessToken = authorizedClient.getAccessToken();
+    public String loadCustomers(Model model ) {
         HttpHeaders httpHeaders = new HttpHeaders() {{
-            set("Authorization", "Bearer " + accessToken.getTokenValue());
+            set("Authorization", "Bearer " +getAccessToken());
         }};
         HttpEntity<OktaUIEmployee> employeeHttpEntity = new HttpEntity<>(httpHeaders);
         try {
@@ -73,5 +70,14 @@ public class VidhanOktaUiController extends WebSecurityConfigurerAdapter {
         return "secure";
     }
 
+    private String getAccessToken() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        OAuth2AuthenticationToken oauthToken = (OAuth2AuthenticationToken) authentication;
+        OAuth2AuthorizedClient client =
+                authorizedClientService.loadAuthorizedClient(
+                        oauthToken.getAuthorizedClientRegistrationId(),
+                        oauthToken.getName());
+        return client.getAccessToken().getTokenValue();
+    }
 
 }
